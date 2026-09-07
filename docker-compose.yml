@@ -1,13 +1,13 @@
 services:
   frontend:
-    image: frontend:latest
+    build: ./frontend
     ports:
       - "80:80"
     networks:
       - both-network
 
   backend:
-    image: backend:latest
+    build: ./dummy-backend
     ports:
       - "3000:3000"
     networks:
