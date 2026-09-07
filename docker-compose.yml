@@ -1,0 +1,18 @@
+services:
+  frontend:
+    image: frontend:latest
+    ports:
+      - "80:80"
+    networks:
+      - both-network
+
+  backend:
+    image: backend:latest
+    ports:
+      - "3000:3000"
+    networks:
+      - both-network
+
+networks:
+  both-network:
+    driver: bridge
